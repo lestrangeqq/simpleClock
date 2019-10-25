@@ -14,6 +14,8 @@ function myClock() {
 	let hour = curDate.getHours();
 	let min = curDate.getMinutes();
 	let sec = curDate.getSeconds();
+	let countMin = 60 - min;
+	let countSec = 60 - sec;
 	min = checkTime(min);
 	sec = checkTime(sec);
 	document.getElementById('today').innerHTML = today + ', ' + curDay + '.' + curMonth;
@@ -24,6 +26,7 @@ function myClock() {
 		document.getElementById('suggest').innerHTML = "Bon Appetit!";
 	} else if (hour == 16) {
 		document.getElementById('suggest').innerHTML = "Just 1 hour!";
+		document.getElementById('countdown').innerHTML = countMin + ':' + countSec;
 	} else if (hour == 16 && min == 55) {
 		document.getElementById('suggest').innerHTML = "Job done!";
 	} else {
