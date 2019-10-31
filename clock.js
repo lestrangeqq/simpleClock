@@ -14,8 +14,8 @@ function myClock() {
 	let hour = curDate.getHours();
 	let min = curDate.getMinutes();
 	let sec = curDate.getSeconds();
-	let countMin = 60 - min;
-	let countSec = 60 - sec;
+	let countMin = 59 - min;
+	let countSec = 59 - sec;
 	min = checkTime(min);
 	sec = checkTime(sec);
 	document.getElementById('today').innerHTML = today + ', ' + curDay + '.' + curMonth;
