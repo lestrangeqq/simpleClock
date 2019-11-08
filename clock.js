@@ -1,7 +1,7 @@
 function myClock() {
 	let curDate = new Date(); 
 	let curDay = curDate.getDate();
-	let curMonth = curDate.getMonth();
+	let curMonth = curDate.getMonth() +1; //because it starts counting from 0
 	let weekday = new Array(7);
 	weekday[0] = 'Sunday';
 	weekday[1] = 'Monday';
